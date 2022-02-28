@@ -57,7 +57,7 @@ class Robot(wpilib.TimedRobot):
         self.leftDriveMotor2.set(self.controller1.getLeftY())
         self.rightDriveMotor3.set(self.controller1.getRightY())
         self.rightDriveMotor4.set(self.controller1.getRightY())
-        self.motor5.set(float(self.controller1.getYButton()) * 0.7)
+        self.motor5.set(float(self.controller1.getYButton()) * 0.8)
         self.motor6.set(float(self.controller1.getYButton()) * 1)
         self.motor7.set(float(self.controller1.getRightBumper()) * 1)
         self.motor8.set(float(self.controller1.getRightBumper()) * 1)
