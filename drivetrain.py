@@ -1,3 +1,5 @@
+import math
+
 import ctre
 
 
@@ -10,9 +12,9 @@ class Drivetrain:
         self.back_right = ctre.WPI_TalonFX(4, "rio")
 
     def drive(self, speed: float, rotation: float):
-        speed *= 0.825
-        rotation *= 0.4
-        self.front_left.set(speed - rotation)
-        self.front_right.set(speed + rotation)
-        self.back_left.set(speed - rotation)
-        self.back_right.set(speed + rotation)
+        speed *= 0.7
+        rotation *= 0.5
+        self.front_left.set(rotation - speed)
+        self.front_right.set(rotation + speed)
+        self.back_left.set(rotation - speed)
+        self.back_right.set(rotation + speed)
