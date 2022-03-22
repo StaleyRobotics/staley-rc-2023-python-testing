@@ -16,7 +16,7 @@ class Launcher:
 
         # Toggle intake
         if controller2.getRightBumperPressed():
-            self.intake_toggle = not self.intake_toggle   #Toggle Right Bumper
+            self.intake_toggle = not self.intake_toggle
         self.intake.set(float(self.intake_toggle))
         self.storage.set(float(self.intake_toggle))
 

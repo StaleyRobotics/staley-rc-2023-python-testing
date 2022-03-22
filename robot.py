@@ -24,7 +24,7 @@ class Robot(wpilib.TimedRobot):
         self.launcher = Launcher()
         self.arm = Arm()
         self.time = wpilib.Timer()
-        wpilib.CameraServer.launch("limelight.py:launch")
+        # wpilib.CameraServer.launch("limelight.py:launch")
 
     def autonomousInit(self):
         self.time.reset()
