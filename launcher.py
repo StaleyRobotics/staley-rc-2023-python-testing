@@ -14,7 +14,7 @@ class Launcher:
     def update(self, time: float, controller2: wpilib.XboxController):
 
         # Toggle intake
-        if controller2.getRightBumper():
+        if controller2.getRightBumperPressed():
             self.intake_toggle = not self.intake_toggle
         self.intake.set(float(self.intake_toggle))
         self.storage.set(float(self.intake_toggle))

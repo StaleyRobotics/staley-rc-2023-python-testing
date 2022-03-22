@@ -8,4 +8,4 @@ class Arm:
         self.arm = ctre.WPI_TalonFX(9)
 
     def update(self, controller1: wpilib.XboxController):
-        self.arm.set(controller1.getRightY()*0.2)
+        self.arm.set(controller1.getRightY()*-0.2)

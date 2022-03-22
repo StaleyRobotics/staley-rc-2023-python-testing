@@ -31,25 +31,26 @@ class Robot(wpilib.TimedRobot):
         self.time.start()
 
     def autonomousPeriodic(self):
-        if self.time.get() < 2:
-            self.launcher.intake.set(0)
-            self.launcher.shooter.set(-0.65)
+        if self.time.get() < 1:
+            self.launcher.shooter.set(-0.675)
             self.launcher.storage.set(1)
-        elif self.time.get() < 3.5:
+        elif self.time.get() < 2:
             self.launcher.barrel.set(-1)
-        elif self.time.get() < 10:
+        elif self.time.get() < 3:
             self.launcher.shooter.set(0)
             self.launcher.barrel.set(0)
-            self.launcher.storage.set(0)
-            if self.time.get() > 8:
-                self.launcher.intake.set(1)
-                self.launcher.storage.set(1)
+            self.launcher.storage.set(1)
+            self.launcher.intake.set(1)
             self.drivetrain.drive(-0.35, 0)
-        elif self.time.get() < 12:
+        elif self.time.get() < 3.5:
             self.drivetrain.drive(0, 0)
+        elif self.time.get() < 4.5:
+            self.drivetrain.drive(0.35, 0)
             self.launcher.intake.set(0)
-            self.launcher.shooter.set(-0.65)
-        elif self.time.get() < 18:
+        elif self.time.get() < 5:
+            self.launcher.shooter.set(-0.675)
+            self.drivetrain.drive(0, 0)
+        elif self.time.get() < 6.5:
             self.launcher.barrel.set(-1)
         else:
             self.launcher.shooter.set(0)
