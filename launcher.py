@@ -20,7 +20,7 @@ class Launcher:
         self.intake.set(float(self.intake_toggle))
         self.storage.set(float(self.intake_toggle))
 
-        if controller2.getLeftTrigger() > 0.2:
+        if controller2.getLeftTriggerAxis() > 0.2:
             self.intake.set(1)
 
         if controller2.getLeftBumper():
