@@ -23,8 +23,8 @@ class Launcher:
             self.storage.set(1)
 
         # Set speed for analog launch
-        if controller2.getRightTriggerAxis():
-            self.shooter.set(-controller2.getRightTriggerAxis())
+        #if controller2.getRightTriggerAxis():
+            #self.shooter.set(-controller2.getRightTriggerAxis())
 
         # Launch
         if controller2.getYButton():
@@ -36,5 +36,7 @@ class Launcher:
             self.shooter.set(-0.7)    #High Shoot
         elif controller2.getBButton():
             self.shooter.set(-0.4)    #Low Shoot
+        elif controller2.getRightTriggerAxis():
+            self.shooter.set(-controller2.getRightTriggerAxis())  # Analog Shoot
         else:
             self.shooter.set(0)
