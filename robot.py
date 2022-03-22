@@ -12,43 +12,64 @@ class Robot(wpilib.TimedRobot):
 
     time: wpilib.Timer
     drivetrain: Drivetrain
-    controller: wpilib.XboxController
+    controller1: wpilib.XboxController
+    controller2: wpilib.XboxController
     launcher: Launcher
     arm: Arm
-    rot: float
 
     def robotInit(self):
         self.drivetrain = Drivetrain()
-        self.controller = wpilib.XboxController(0)
+        self.controller1 = wpilib.XboxController(0)
+        self.controller2 = wpilib.XboxController(1)
         self.launcher = Launcher()
         self.arm = Arm()
         self.time = wpilib.Timer()
-        self.rot = 0
+        wpilib.CameraServer.launch("limelight.py:launch")
+
+    def autonomousInit(self):
+        self.time.reset()
+        self.time.start()
+
+    def autonomousPeriodic(self):
+        if self.time.get() < 2:
+            self.launcher.intake.set(0)
+            self.launcher.shooter.set(-0.65)
+            self.launcher.storage.set(1)
+        elif self.time.get() < 3.5:
+            self.launcher.barrel.set(-1)
+        elif self.time.get() < 10:
+            self.launcher.shooter.set(0)
+            self.launcher.barrel.set(0)
+            self.launcher.storage.set(0)
+            if self.time.get() > 8:
+                self.launcher.intake.set(1)
+                self.launcher.storage.set(1)
+            self.drivetrain.drive(-0.35, 0)
+        elif self.time.get() < 12:
+            self.drivetrain.drive(0, 0)
+            self.launcher.intake.set(0)
+            self.launcher.shooter.set(-0.65)
+        elif self.time.get() < 18:
+            self.launcher.barrel.set(-1)
+        else:
+            self.launcher.shooter.set(0)
+            self.launcher.barrel.set(0)
+            self.launcher.storage.set(0)
+
+    def autonomousExit(self):
+        self.time.stop()
 
     def teleopInit(self):
         self.time.start()
 
     def teleopPeriodic(self):
-        self.drivetrain.drive(self.controller.getLeftY(), self.controller.getLeftX())
-        self.launcher.update(self.time.get(), self.controller)
-        self.arm.update(self.controller)
+        self.drivetrain.drive(self.controller1.getLeftY(), self.controller1.getLeftX())
+        self.launcher.update(self.time.get(), self.controller2)
+        self.arm.update(self.controller1)
 
     def teleopExit(self):
         self.time.stop()
 
-    def autonomousInit(self):
-        self.time.start()
-
-    def autonomousPeriodic(self):
-        self.rot += random.randint(-2, 2) / 100
-        if self.rot > 1.0:
-            self.rot = 1.0
-        if self.rot < -1.0:
-            self.rot = -1.0
-        self.drivetrain.drive(0.5, self.rot)
-
-    def autonomousExit(self):
-        self.time.stop()
 
 if __name__ == "__main__":
     wpilib.run(Robot)
