@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: robotpy-halsim-gui
+Version: 2022.4.1.1
+Summary: WPILib command framework
+Home-page: https://github.com/robotpy/robotpy-halsim-gui
+Author: RobotPy Development Team
+Author-email: robotpy@googlegroups.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: robotpy-wpiutil (<2023.0.0,>=2022.4.1.1)
+Requires-Dist: robotpy-wpimath (<2023.0.0,>=2022.4.1.0)
+Requires-Dist: robotpy-hal (<2023.0.0,>=2022.4.1.0)
+Requires-Dist: pyntcore (<2023.0.0,>=2022.4.1.0)
+
+robotpy-halsim-gui
+==================
+
+Installing this package will allow you to utilize the 2020+ WPILib GUI
+simulation from a RobotPy program.
+
+Usage
+-----
+
+First, install pyfrc. Then run your robot with the 'sim' argument:
+
+    # Windows
+    py -3 ./robot.py sim
+
+    # Linux/OSX
+    python3 robot.py sim
+
+WPILib's documentation for using the simulator can be found at http://docs.wpilib.org/en/latest/docs/software/wpilib-tools/robot-simulation/simulation-gui.html
+
+

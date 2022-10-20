@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: pyfrc
+Version: 2022.1.5
+Summary: Development tools library for python interpreter used for the FIRST Robotics Competition
+Home-page: https://github.com/robotpy/pyfrc
+Author: Dustin Spicuzza
+Author-email: robotpy@googlegroups.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pytest (>=3.9)
+Requires-Dist: pytest-reraise
+Requires-Dist: pynetconsole (>=2.0.2)
+Requires-Dist: pint (>=0.11.0)
+Requires-Dist: robotpy-wpiutil (<2023,>=2022.4.1.1)
+Requires-Dist: pyntcore (<2023,>=2022)
+Requires-Dist: robotpy-hal (<2023,>=2022.4.1.1)
+Requires-Dist: wpilib (<2023,>=2022.4.1.1)
+Requires-Dist: robotpy-installer (<2023,>=2022)
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+
+pyfrc - RobotPy development library helper
+==========================================
+
+[![Build Status](https://travis-ci.org/robotpy/pyfrc.svg)](https://travis-ci.org/robotpy/pyfrc)
+
+pyfrc is a python 3 library designed to make developing python code using WPILib for
+FIRST Robotics Competition easier.
+
+This library contains a few primary parts:
+
+* A built-in uploader that will upload your robot code to the robot
+* Integration with the py.test testing tool to allow you to easily write unit
+  tests for your robot code.
+* Various support for robot simulation
+  
+Documentation
+=============
+
+* RobotPy documentation: https://robotpy.readthedocs.io
+* Installation: https://robotpy.readthedocs.io/en/stable/install/pyfrc.html
+
+Contributing new changes
+========================
+
+pyfrc is intended to be a project that all members of the FIRST community can
+quickly and easily contribute to. If you find a bug, or have an idea that you
+think others can use:
+
+1. [Fork this git repository](https://github.com/robotpy/robotpy/fork) to your github account
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push -u origin my-new-feature`)
+5. Create new Pull Request on github
+
+
+Authors
+=======
+
+Dustin Spicuzza (dustin@virtualroadside.com)
+
+Contributors:
+
+* Sam Rosenblum
+* James Ward
+* Christian Balcom
+* Others
+
+pyfrc is originally derived from (and supercedes) fake_wpilib, which was
+developed with contributions from Sam Rosenblum and Team 2423. 
+
+

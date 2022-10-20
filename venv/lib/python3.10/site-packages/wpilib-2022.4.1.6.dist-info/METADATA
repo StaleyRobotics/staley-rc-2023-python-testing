@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: wpilib
+Version: 2022.4.1.6
+Summary: Binary wrapper for FRC WPILib
+Home-page: https://github.com/robotpy/robotpy-wpilib
+Author: RobotPy Development Team
+Author-email: robotpy@googlegroups.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: robotpy-wpiutil (<2023.0.0,>=2022.4.1.1)
+Requires-Dist: robotpy-wpimath (<2023.0.0,>=2022.4.1.0)
+Requires-Dist: robotpy-hal (<2023.0.0,>=2022.4.1.0)
+Requires-Dist: pyntcore (<2023.0.0,>=2022.4.1.0)
+
+RobotPy WPILib
+==============
+
+Python version of WPILib - the standard library used for programming FRC
+robots.
+
+Installation
+============
+
+Typically, you don't install this directly, but use the RobotPy installer
+to install it on your roboRIO, or it is installed by pip as part of the
+pyfrc setup process.
+
+

@@ -1,0 +1,11 @@
+[robotpybuild]
+ctre = ctre.pkgcfg
+ctre_api_sim = ctre._apicpp_sim.pkgcfg
+ctre_cci_sim = ctre._cci_sim.pkgcfg
+ctre_simCANCoder = ctre._simcancoder.pkgcfg
+ctre_simPigeonIMU = ctre._simpigeonimu.pkgcfg
+ctre_simTalonFX = ctre._simtalonfx.pkgcfg
+ctre_simTalonSRX = ctre._simtalonsrx.pkgcfg
+ctre_simVictorSPX = ctre._simvictorspx.pkgcfg
+ctre_wpiapi_sim = ctre._wpiapi_sim.pkgcfg
+

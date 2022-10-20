@@ -1,0 +1,3 @@
+[console_scripts]
+robotpy-installer = robotpy_installer.installer:main
+

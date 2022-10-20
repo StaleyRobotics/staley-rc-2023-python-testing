@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: robotpy-ctre
+Version: 2022.1.1
+Summary: Binary wrappers for the CTRE Phoenix library
+Home-page: https://github.com/robotpy/robotpy-ctre
+Author: RobotPy Development Team
+Author-email: robotpy@googlegroups.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: wpilib (<2023.0.0,>=2022.2.1.3)
+
+robotpy-ctre
+============
+
+This is a python wrapper around the CTRE Phoenix library. The RobotPy project
+is not associated with or endorsed by Cross The Road Electronics.
+
+**NOTE**: CTRE only supports simulation for the following platforms:
+
+* Linux (64-bit only)
+* Windows (64-bit only)
+* OSX
+
+Other platforms will fail to install with an 404 error.
+
+Documentation
+=============
+
+* `Installation <http://robotpy.readthedocs.io/en/stable/install/ctre.html>`_
+* `Python API Documentation <http://robotpy.readthedocs.io/projects/ctre/en/stable/api.html>`_
+* `CTRE's software guide <https://phoenix-documentation.readthedocs.io/en/latest/index.html>`_
+
+
+License
+=======
+
+RobotPy specific bits are available under the Apache 2.0 license. The CTRE
+binaries are available under their custom license which basically says "you may
+only use this software with our hardware". See LICENSE for details.
+
+Author
+======
+
+Dustin Spicuzza (dustin@virtualroadside.com)
+
+

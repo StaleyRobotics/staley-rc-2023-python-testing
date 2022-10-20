@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: robotpy-wpimath
+Version: 2022.4.1.3
+Summary: Binary wrapper for FRC WPIMath library
+Home-page: https://github.com/robotpy/robotpy-wpimath
+Author: RobotPy Development Team
+Author-email: robotpy@googlegroups.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: robotpy-wpiutil (<2023.0.0,>=2022.4.1.1)
+
+robotpy-wpimath
+===============
+
+Python wrappers for WPILib's wpimath library.
+
+* Installation instructions can be found in the [RobotPy documentation](https://robotpy.readthedocs.io/en/latest/getting_started.html)
+* Documentation can be found at [readthedocs](https://robotpy.readthedocs.io/projects/wpimath/en/stable/api.html)
+
+
